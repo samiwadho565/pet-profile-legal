@@ -11,9 +11,9 @@ h1{font-size:28px;margin:0 0 4px} h2{font-size:19px;margin:32px 0 8px}
 .muted{color:var(--muted);font-size:14px} p{white-space:pre-line;margin:0}
 .card{background:var(--card);border-radius:12px;padding:16px 18px;margin:16px 0}
 a{color:var(--accent)}
-nav{margin-top:40px;padding-top:16px;border-top:1px solid rgba(127,127,127,.25);font-size:14px}nav a{margin-right:16px}</style></head><body><main>
+</style></head><body><main>
 <h1>Pet Profile — Privacy Policy</h1>
-<div class="muted">Last updated: November 6, 2026</div>
+<div class="muted">Last updated: November 23, 2026</div>
 <h2>1. About Pet Profile</h2><p>Pet Profile is a pet management application developed and operated by Pet Profile. By using this app, you agree to this Privacy Policy.</p>
 <h2>2. Information We Collect</h2><p>We collect the following information to provide our services:
 
@@ -29,7 +29,11 @@ nav{margin-top:40px;padding-top:16px;border-top:1px solid rgba(127,127,127,.25);
 
 • Lost &amp; Found Posts: When you post a lost or found pet, we collect pet details and photos, your contact name and phone number, the last-seen location (address and, if you pick it on the map, its map coordinates), city, and any reward you mention. This information is publicly visible to other users so they can contact you.
 
-• AI Chat: Messages and pet photos you send to the PetDoc AI assistant are sent through our secure server to the Google Gemini API to generate a response. We do not store your chat messages or chat photos; we only keep a daily count of how many PetDoc messages each account sends, to prevent abuse.
+• PetDoc AI (chat and Scan): Messages and pet photos you send to the PetDoc AI assistant, including photos taken with PetDoc Scan, are sent through our secure server to Anthropic&#x27;s Claude API to generate a response. If Claude is unavailable, the Google Gemini API is used as a backup. We do not store your chat messages or chat photos; we only keep a count of how many PetDoc messages and scans each account uses, to apply plan limits and prevent abuse.
+
+• Saved Health Scans: If you tap &quot;Save to pet profile&quot; after a PetDoc Scan, we store a small copy of the scan photo and the scan result (health score, likely breed, findings and tips) in that pet&#x27;s health history. Saved scans are visible only to you in the app and you can delete them at any time. Scans you do not save are not stored.
+
+• Alarm Times: The times of your reminder, feeding and medicine alarms are saved with your account, so your alarms can be set again when you sign in on another phone or reinstall the app.
 
 • Reports &amp; Blocks: If you report content or block a user, we store the report (reason, optional details and a copy of the reported content) and your block list.
 
@@ -84,7 +88,9 @@ Users are strongly advised to:
 — Not make financial payments without proper verification.</p>
 <h2>5. PetDoc AI Assistant</h2><p>PetDoc is an AI-powered assistant that answers pet care questions and can look at photos of your pet. Please note:
 
-• Your messages and photos are processed by the Google Gemini API. By using PetDoc, you also agree to Google&#x27;s applicable terms. Google may use content submitted through the Gemini API to improve its products.
+• Your messages and photos are processed by Anthropic&#x27;s Claude API, with the Google Gemini API as a backup. By using PetDoc, you also agree to the applicable terms of these providers. Under Anthropic&#x27;s commercial terms, content sent through its API is not used to train its models. Google may use content submitted through the Gemini API to improve its products.
+
+• PetDoc Scan looks at a photo of your pet and gives a health score, likely breed and things to watch. It is a visual check only — it cannot see everything a vet can and may be wrong.
 
 • PetDoc provides general information only. It is not a licensed veterinarian and its responses should not be treated as professional veterinary advice, diagnosis, or treatment. In an emergency, contact a veterinarian immediately.
 
@@ -92,7 +98,7 @@ Users are strongly advised to:
 
 • You can report any PetDoc response you think is wrong, harmful or inappropriate using the &quot;Report response&quot; link under it.
 
-• PetDoc usage may be limited to a number of messages per day. Daily limits and photo analysis depend on your plan (Free or Premium).
+• PetDoc usage may be limited to a number of messages and scans per day or per week. Limits and photo analysis depend on your plan (Free or Premium).
 
 • Pet Profile and Pet Panda are not liable for any decisions made based on PetDoc&#x27;s responses.</p>
 <h2>6. Data Storage &amp; Security</h2><p>Your data is stored securely using Supabase, a trusted cloud platform. All data is encrypted in transit via HTTPS/TLS. Photos and documents are stored in Supabase Storage.
@@ -100,7 +106,7 @@ Users are strongly advised to:
 We implement industry-standard security measures. However, no internet transmission is 100% secure, and we cannot guarantee absolute security of your data.</p>
 <h2>7. Data Sharing</h2><p>We do not share your personal data except:
 
-• Service Providers that process data on our behalf: Supabase (database, authentication and storage), Google Gemini API (AI responses), Google Firebase (push notifications via Firebase Cloud Messaging and crash reports via Firebase Crashlytics), Google Sign-In (if you choose to sign in with Google), Google AdMob (ads), Google Play Billing (payments for Premium) and RevenueCat (subscription management; see <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a>). Google processes advertising data as described in its Privacy Policy (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>) and at <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a>.
+• Service Providers that process data on our behalf: Supabase (database, authentication and storage), Anthropic (Claude API, AI responses; see <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a>), Google Gemini API (backup AI responses), Google Firebase (push notifications via Firebase Cloud Messaging and crash reports via Firebase Crashlytics), Google Sign-In (if you choose to sign in with Google), Google AdMob (ads), Google Play Billing (payments for Premium) and RevenueCat (subscription management; see <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a>). Google processes advertising data as described in its Privacy Policy (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>) and at <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a>.
 
 • Other users: Mating Board and Lost &amp; Found posts are visible to all app users. The contact number on a Lost &amp; Found post is public so people can reach you. Mating Board phone numbers are shared only between a post owner and the bidder they accept, and a bidder&#x27;s number is visible to the owner of the post they bid on.
 
@@ -108,10 +114,14 @@ We implement industry-standard security measures. However, no internet transmiss
 </p>
 <h2>8. Photos &amp; Media</h2><p>Pet photos and medical documents you upload are stored in our cloud storage and are shown inside the app only to you. They are stored at unguessable web addresses, so anyone who has the exact link could open the file — do not share these links if you want to keep them private.
 
+Photos of health scans you save to a pet&#x27;s profile are stored the same way and are shown only to you.
+
 Mating post photos and Lost &amp; Found photos are visible to all users as part of the post.
 
 Camera and photo access are used only when you actively choose to add or change a photo.</p>
 <h2>9. Notifications &amp; Alarms</h2><p>Pet Profile uses device notifications and alarms for medicine and feeding reminders. Alarm notifications are designed to alert you even when your phone is locked. You can disable notifications at any time from your device settings.
+
+Pet Profile can also remind you of a medical record&#x27;s next due date (for example a vaccination) with a notification the day before and on the day. When you sign out, the alarms and reminders on that device are turned off; they are set again when you sign in.
 
 We are not responsible for missed alarms due to device settings, battery optimization, or operating system restrictions.</p>
 <h2>10. Your Rights &amp; Account Deletion</h2><p>You have the right to:
@@ -150,5 +160,4 @@ Your use of the app and its community features is entirely at your own risk.</p>
 Email: thepetsprofile@gmail.com
 
 We aim to respond within 48 hours.</p>
-<nav><a href="index.html">Home</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-and-conditions.html">Terms &amp; Conditions</a><a href="delete-account.html">Delete Account</a></nav>
 </main></body></html>
